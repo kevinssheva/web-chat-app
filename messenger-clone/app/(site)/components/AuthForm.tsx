@@ -66,7 +66,6 @@ const AuthForm = () => {
         redirect: false,
       })
         .then((res) => {
-          console.log(res);
           if (res?.error) {
             toast.error("Invalid credentials");
           }

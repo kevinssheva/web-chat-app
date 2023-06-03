@@ -14,12 +14,11 @@ interface DesktopSidebarProps {
 const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ currentUser }) => {
   // console.log(currentUser);
   const routes = useRoutes();
-  console.log(routes);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <SettingsModal 
+      <SettingsModal
         currentUser={currentUser}
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
@@ -44,7 +43,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ currentUser }) => {
             onClick={() => setIsOpen(true)}
             className="cursor-pointer transition hover:opacity-75"
           >
-            <Avatar user={currentUser}/>
+            <Avatar user={currentUser} />
           </div>
         </nav>
       </div>
